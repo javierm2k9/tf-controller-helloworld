@@ -3,7 +3,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: helloworld-tf
-  namespace: flux-system
 spec:
   interval: 30s
   url: https://github.com/javierm2k9/tf-controller-helloworld
@@ -14,7 +13,6 @@ apiVersion: infra.contrib.fluxcd.io/v1alpha2
 kind: Terraform
 metadata:
   name: helloworld
-  namespace: flux-system
 spec:
   path: ./terraform
   approvePlan: auto
@@ -22,10 +20,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: helloworld
-    namespace: flux-system
-  healthChecks:
-    - name: url_not_from_output
-      type: http
-      url: "localhost"
   writeOutputsToSecret:
     name: helloworld-outputs
