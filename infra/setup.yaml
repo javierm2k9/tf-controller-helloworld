@@ -23,5 +23,9 @@ spec:
     kind: GitRepository
     name: helloworld
     namespace: flux-system
+  healthChecks:
+    - name: url_not_from_output
+      type: http
+      url: "https://example.org"
   writeOutputsToSecret:
     name: helloworld-outputs
