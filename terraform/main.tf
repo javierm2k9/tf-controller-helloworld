@@ -4,10 +4,10 @@ terraform {
 
 variable "subject" {
    type = string
-   default = "tfctl-rc"
+   default = "tf-controller"
    description = "Subject to hello"
 }
 
 output "hello_world" {
-  value = "hey hey ya, ${var.subject}!"
+  value = "Auto sync, ${var.subject}!"
 }
