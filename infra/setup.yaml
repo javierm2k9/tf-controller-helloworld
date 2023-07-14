@@ -20,6 +20,6 @@ spec:
   interval: 1m
   sourceRef:
     kind: GitRepository
-    name: helloworld
+    name: helloworld-v2
   writeOutputsToSecret:
     name: helloworld-outputs
