@@ -9,5 +9,5 @@ variable "subject" {
 }
 
 output "hello_world" {
-  value = "Auto sync, ${var.subject}!"
+  value = "Recreate, ${var.subject}!"
 }
