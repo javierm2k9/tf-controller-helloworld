@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: dev2
+    namespace: dev
     server: 'https://kubernetes.default.svc'
   source:
     path: ./infra
