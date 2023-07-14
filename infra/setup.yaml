@@ -26,6 +26,6 @@ spec:
   healthChecks:
     - name: url_not_from_output
       type: http
-      url: "https://example.org"
+      url: "localhost"
   writeOutputsToSecret:
     name: helloworld-outputs
